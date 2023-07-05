@@ -1,0 +1,35 @@
+{
+  "name": "appnify",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": "dist/index.js",
+  "files": [
+    "dist",
+    "public"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "commander": "^10.0.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^9.2.7",
+    "kolorist": "^1.7.0",
+    "ora": "^6.3.1",
+    "tsx": "^3.12.7",
+    "typescript": "^4.6.4",
+    "vite": "^4.3.9"
+  },
+  "eslintConfig": {
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "endOfLine": "auto"
+  }
+}
