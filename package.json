@@ -1,7 +1,7 @@
 {
   "name": "appnify",
   "version": "0.0.1",
-  "description": "A command line tool.",
+  "description": "A command line tool for quickly initializing projects and installing commonly used tools.",
   "author": "juetan",
   "type": "module",
   "bin": {
@@ -53,5 +53,6 @@
     "email": "810335188@qq.com",
     "url": "https://github.com/appnify/appnify/issues"
   },
-  "homepage": "https://github.com/appnify/appnify#readme"
+  "homepage": "https://github.com/appnify/appnify#readme",
+  "license": "MIT"
 }
