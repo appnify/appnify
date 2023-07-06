@@ -1,13 +1,19 @@
 {
   "name": "appnify",
   "version": "0.0.1",
+  "description": "A command line tool.",
+  "author": "juetan",
   "type": "module",
-  "bin": "dist/index.js",
+  "bin": {
+    "appnify": "./dist/index.js"
+  },
   "files": [
-    "dist",
-    "public"
+    "dist"
   ],
-  "scripts": {},
+  "scripts": {
+    "dev": "tsx ./src/main.ts",
+    "build": "vite build"
+  },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
     "commander": "^10.0.1",
@@ -31,5 +37,21 @@
     "printWidth": 120,
     "singleQuote": true,
     "endOfLine": "auto"
-  }
+  },
+  "keywords": [
+    "commandline",
+    "cli",
+    "typescript",
+    "vite",
+    "appnify"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appnify/appnify.git"
+  },
+  "bugs": {
+    "email": "810335188@qq.com",
+    "url": "https://github.com/appnify/appnify/issues"
+  },
+  "homepage": "https://github.com/appnify/appnify#readme"
 }

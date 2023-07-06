@@ -16,8 +16,28 @@ import {
 import { print, printBanner } from './utils';
 
 const __dirname = path.join(fileURLToPath(import.meta.url), '..');
+const createHelper = () => {
+  const helper = program.createHelp();
+  const helpFormat = helper.formatHelp;
+  helper.formatHelp = function (cmd: any, helper: any) {
+    let output = helpFormat.call(this, cmd, helper);
+    output = output.replace('Usage:', '用法:');
+    output = output.replace('Options:', '选项:');
+    output = output.replace('Commands:', '命令:');
+    return output;
+  };
+  return helper;
+};
 
-program.option('--dry-run', '打印执行命令, 但不执行命令');
+program
+  .name('appnify')
+  .summary('一键初始化项目, 一键安装依赖')
+  .version('0.0.1', '-v, --version', '查看版本信息')
+  .helpOption('-h, --help', '查看帮助信息')
+  .addHelpText('after', ' ')
+  .addHelpCommand('help [command]', '查看指定命令的帮助信息')
+  .configureHelp(createHelper())
+  .option('-d, --dry-run', '打印执行命令, 但不执行命令');
 
 program
   .command('install [name]')
