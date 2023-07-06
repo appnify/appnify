@@ -1,41 +1,45 @@
 # Appnify
 
-一个快速初始化项目和安装常用工具的命令行工具。
+A command-line tool for quickly initializing projects and installing common tools.
 
-## 快速开始
+Read this in other languages: English | [简体中文](./README_zh-CN.md)
 
-可直接运行或安装后运行, 在后面的描述中将以第一种形式为例。
+## Quick Start
+
+You can run it directly or after installation. The first format will be used as an example in the following descriptions.
 
 ```sh
-# 直接运行
+# Run directly
 npx appnify <command>
 
-# 安装后运行
+# Run after installation
 npm install appnify -g
 appnify <command>
 ```
 
-## 安装依赖
+## Installing Dependencies
 
-支持以下工具的安装：
-| 名称 | 描述 | 官方仓库 |
-| :--- | :--- | :---
-| husky       | 提交钩子管理工具(git) | https://github.com/typicode/husky
-| lint-staged | 只校验提交的代码(git) | https://github.com/okonet/lint-staged
-| release-it  | 版本发布记录工具(git) | https://github.com/release-it/release-it
-| commitlint  | 提交信息校验工具(git) | https://github.com/conventional-changelog/commitlint
-| eslint      | 代码质量检查工具      | https://github.com/eslint/eslint
-| prettier    | 代码样式格式工具      | https://github.com/prettier/prettier
-
-用法：
+Usage:
 ```sh
 npx appnify install <name>
 ```
-其中：
-- `install`为执行该操作的命令，也可使用别名`i`。
-- `name`参数：安装的工具名称，未指定该参数时将显示选择列表，可指定`all`一键安装。
-- `installer`参数：指定安装时使用的包管理器，指定为`none`时不安装。
 
-## 最后
-如果你在使用过程中遇到问题，欢迎在issue中提问。
+Supports installation of the following tools:
 
+| Name         | Description                             | Official Repository                                       |
+| ------------ | --------------------------------------- | --------------------------------------------------------- |
+| husky        | Git hooks management tool               | [https://github.com/typicode/husky](https://github.com/typicode/husky)                 |
+| lint-staged  | Validate only staged files (Git)        | [https://github.com/okonet/lint-staged](https://github.com/okonet/lint-staged)       |
+| release-it   | Release management tool (Git)           | [https://github.com/release-it/release-it](https://github.com/release-it/release-it) |
+| commitlint   | Commit message validation tool (Git)    | [https://github.com/conventional-changelog/commitlint](https://github.com/conventional-changelog/commitlint)                |
+| eslint       | Code quality checking tool              | [https://github.com/eslint/eslint](https://github.com/eslint/eslint)                   |
+| prettier     | Code formatting tool                    | [https://github.com/prettier/prettier](https://github.com/prettier/prettier)           |
+
+Where:
+- `install` is the command to perform this operation, and you can also use the alias `i`.
+- `<name>` parameter: the name of the tool to install. If not specified, a selection list will be displayed. Specify `all` to install all tools at once.
+- `--installer` parameter: specifies the package manager to use during installation. Specify `none` to skip the installation process.
+
+## Finally
+
+If you encounter any issues during usage, feel free to ask questions in the issue section.
